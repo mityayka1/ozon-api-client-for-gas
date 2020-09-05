@@ -6,7 +6,8 @@ const TestAccountId = '836';
  */
 class ApiClient {
     /**
-     * @constructor if set flag "useTestApi: true" 
+     * @constructor 
+     * @description if set flag "useTestApi: true" 
      * you can work with Ozon test API witn non-real data and items
      * @param {object} options
      * @param {number} options.accountId
@@ -102,7 +103,7 @@ class ApiClient {
     }
 
     /**
-     * @method updatePrices(...itemsWithPrices) updates prices for specified items
+     * @method updatePrices(itemsWithPrices) updates prices for specified items
      * @param  {...itemWithPrices} itemsWithPrices (object instance of 'itemWithPrices')
      * @returns {object} object with update status and errors example: {updated: ok, errors: [[i, offer_id, err.code, err.msg]]}
      * @example 
@@ -137,7 +138,7 @@ class ApiClient {
     }
 
     /**
-     * @method updateStock(...itemsWithStock) updates stocks for specified items
+     * @method updateStock(itemsWithStock) updates stocks for specified items
      * @param  {...itemWithStock} itemsWithStock (object instance of 'itemWithStock')
      * @returns {object} object with update status and errors example: {updated: ok, errors: [[i, offer_id, err.code, err.msg]]}
      * @example 
@@ -194,11 +195,11 @@ class ApiClient {
     }
 
     /**
-     * @method getItemsPrices({ page, page_size })
+     * @method getItemsPrices()
      * @param {object} options
      * @param {number} options.page number of page
      * @param {number} options.page_size size of page
-     * @returns {array<items>} array of arrays with items [[offer_id, price, old_price, premium_price]]
+     * @returns {array} array of arrays with items [[offer_id, price, old_price, premium_price]]
      * @example
      * const Ozon = new ApiClient({ accountId: '000', apiKey: 'xxxxx' });
      * const arrayOfItemsWithPrices = Ozon.getItemsPrices({page: 1, page_size: 100});
@@ -227,7 +228,8 @@ class ApiClient {
 }
 
 /**
- * @class itemWithPrices for send in update requests
+ * @class 
+ * @description itemWithPrices for send in update requests
  */
 class itemWithPrices {
     /**

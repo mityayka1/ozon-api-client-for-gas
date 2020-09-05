@@ -324,7 +324,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="OzonClientForGAS.js.html">OzonClientForGAS.js</a>, <a href="OzonClientForGAS.js.html#line260">line 260</a>
+        <a href="OzonClientForGAS.js.html">OzonClientForGAS.js</a>, <a href="OzonClientForGAS.js.html#line262">line 262</a>
     </li></ul></dd>
     
 
@@ -457,7 +457,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="OzonClientForGAS.js.html">OzonClientForGAS.js</a>, <a href="OzonClientForGAS.js.html#line173">line 173</a>
+        <a href="OzonClientForGAS.js.html">OzonClientForGAS.js</a>, <a href="OzonClientForGAS.js.html#line174">line 174</a>
     </li></ul></dd>
     
 
@@ -515,6 +515,582 @@
 
 
         
+            
+
+    
+
+    
+    <h4 class="name" id="getItemsPrices()"><span class="type-signature"></span>getItemsPrices()<span class="signature">(options)</span><span class="type-signature"> &rarr; {array}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>page</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">number of page</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>page_size</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">size of page</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="OzonClientForGAS.js.html">OzonClientForGAS.js</a>, <a href="OzonClientForGAS.js.html#line197">line 197</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    array of arrays with items [[offer_id, price, old_price, premium_price]]
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const Ozon = new ApiClient({ accountId: '000', apiKey: 'xxxxx' });const arrayOfItemsWithPrices = Ozon.getItemsPrices({page: 1, page_size: 100});console.log(arrayOfItemsWithPrices); // array with items [[offer_id, price, old_price, premium_price]]</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="updatePrices(itemsWithPrices)updatespricesforspecifieditems"><span class="type-signature"></span>updatePrices(itemsWithPrices) updates prices for specified items<span class="signature">(&hellip;itemsWithPrices)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>itemsWithPrices</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="itemWithPrices.html">itemWithPrices</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">(object instance of 'itemWithPrices')</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="OzonClientForGAS.js.html">OzonClientForGAS.js</a>, <a href="OzonClientForGAS.js.html#line105">line 105</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    object with update status and errors example: {updated: ok, errors: [[i, offer_id, err.code, err.msg]]}
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const Ozon = new ApiClient({accountId: '000', apiKey: 'xxxxx'});const itemForUpdatePrices = new Ozon.itemWithPrices(["offer_id", 10, 5, 3]);Ozon.updatePrices(itemForUpdatePrices); // ==> {updated:'ok'}</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="updateStock(itemsWithStock)updatesstocksforspecifieditems"><span class="type-signature"></span>updateStock(itemsWithStock) updates stocks for specified items<span class="signature">(&hellip;itemsWithStock)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>itemsWithStock</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="itemWithStock.html">itemWithStock</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">(object instance of 'itemWithStock')</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="OzonClientForGAS.js.html">OzonClientForGAS.js</a>, <a href="OzonClientForGAS.js.html#line140">line 140</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    object with update status and errors example: {updated: ok, errors: [[i, offer_id, err.code, err.msg]]}
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const Ozon = new ApiClient({ accountId: '000', apiKey: 'xxxxx' });const itemForUpdateStock = new Ozon.itemWithStock(["offer_id", 5]);Ozon.updatePrices(itemForUpdatePrices); // ==> {updated:'ok'}}</code></pre>
+
+
+
+        
     
 
     
@@ -530,13 +1106,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ApiClient.html">ApiClient</a></li><li><a href="if%2520set%2520flag%2520_useTestApi_%2520true_%2520%250Dyou%2520can%2520work%2520with%2520Ozon%2520test%2520API%2520witn%2520non-real%2520data%2520and%2520items.html">if set flag "useTestApi: true" you can work with Ozon test API witn non-real data and items</a></li><li><a href="itemWithPrices.html">itemWithPrices</a></li><li><a href="itemWithStock.html">itemWithStock</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ApiClientforcallaconstuctor">ApiClient for call a constuctor</a></li><li><a href="global.html#getItemList(filterOptions)makerequestforgetlistofitemsinaccountwithspecifiedfilteroptions">getItemList(filterOptions) make request for get list of items in accountwith specified filter options</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ApiClient.html">ApiClient</a></li><li><a href="itemWithPrices.html">itemWithPrices</a></li><li><a href="itemWithStock.html">itemWithStock</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ApiClientforcallaconstuctor">ApiClient for call a constuctor</a></li><li><a href="global.html#getItemList(filterOptions)makerequestforgetlistofitemsinaccountwithspecifiedfilteroptions">getItemList(filterOptions) make request for get list of items in accountwith specified filter options</a></li><li><a href="global.html#getItemsPrices()">getItemsPrices()</a></li><li><a href="global.html#updatePrices(itemsWithPrices)updatespricesforspecifieditems">updatePrices(itemsWithPrices) updates prices for specified items</a></li><li><a href="global.html#updateStock(itemsWithStock)updatesstocksforspecifieditems">updateStock(itemsWithStock) updates stocks for specified items</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Sat Sep 05 2020 08:34:11 GMT+0300 (Москва, стандартное время)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Sat Sep 05 2020 08:43:01 GMT+0300 (Москва, стандартное время)
 </footer>
 
 <script> prettyPrint(); </script>
