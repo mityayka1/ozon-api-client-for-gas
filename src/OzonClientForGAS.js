@@ -103,7 +103,7 @@ class ApiClient {
 
     /**
      * @method updatePrices(...itemsWithPrices) updates prices for specified items
-     * @param  {...<itemWithPrices>} itemsWithPrices (object instance of 'itemWithPrices')
+     * @param  {...itemWithPrices} itemsWithPrices (object instance of 'itemWithPrices')
      * @returns {object} object with update status and errors example: {updated: ok, errors: [[i, offer_id, err.code, err.msg]]}
      * @example 
      * const Ozon = new ApiClient({accountId: '000', apiKey: 'xxxxx'});
@@ -138,7 +138,7 @@ class ApiClient {
 
     /**
      * @method updateStock(...itemsWithStock) updates stocks for specified items
-     * @param  {...<itemWithStock>} itemsWithStock (object instance of 'itemWithStock')
+     * @param  {...itemWithStock} itemsWithStock (object instance of 'itemWithStock')
      * @returns {object} object with update status and errors example: {updated: ok, errors: [[i, offer_id, err.code, err.msg]]}
      * @example 
      * const Ozon = new ApiClient({ accountId: '000', apiKey: 'xxxxx' });
@@ -198,7 +198,7 @@ class ApiClient {
      * @param {object} options
      * @param {number} options.page number of page
      * @param {number} options.page_size size of page
-     * @returns {array<[items]>} array of arrays with items [[offer_id, price, old_price, premium_price]]
+     * @returns {array<items>} array of arrays with items [[offer_id, price, old_price, premium_price]]
      * @example
      * const Ozon = new ApiClient({ accountId: '000', apiKey: 'xxxxx' });
      * const arrayOfItemsWithPrices = Ozon.getItemsPrices({page: 1, page_size: 100});
